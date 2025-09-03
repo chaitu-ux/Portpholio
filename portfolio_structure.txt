@@ -1,0 +1,85 @@
+PORTFOLIO PROJECT STRUCTURE
+============================
+
+d:\Portfolio\
+├── app/                          # Main application code
+│   ├── app.css                   # Global styles with Tailwind CSS
+│   ├── content/
+│   │   └── site.ts              # Site configuration and data
+│   ├── root.tsx                  # Root layout component
+│   ├── routes.ts                 # Route definitions
+│   ├── routes/                   # Page components
+│   │   ├── home.tsx             # Home page
+│   │   ├── about.tsx            # About page
+│   │   ├── experience.tsx       # Experience/Internships page
+│   │   ├── projects.tsx         # Projects showcase
+│   │   ├── skills.tsx           # Skills page
+│   │   ├── contact.tsx          # Contact page
+│   │   └── certifications.tsx   # Certifications page
+│   ├── ui/                      # Reusable UI components
+│   │   ├── navbar.tsx           # Navigation header
+│   │   ├── footer.tsx           # Footer component
+│   │   └── theme-toggle.tsx     # Theme toggle (removed)
+│   └── welcome/                  # Welcome/landing components
+│       ├── hero.tsx             # Hero section
+│       ├── welcome.tsx          # Welcome page
+│       ├── logo-dark.svg        # Dark logo
+│       └── logo-light.svg       # Light logo
+├── public/                       # Static assets
+│   ├── _redirects               # Netlify redirects for SPA
+│   ├── favicon.ico              # Site favicon
+│   ├── profile.jpg              # Profile picture
+│   ├── resume.pdf               # Downloadable resume
+│   └── certifications/          # Certification images
+├── node_modules/                 # Dependencies
+├── package.json                  # Project dependencies and scripts
+├── package-lock.json            # Locked dependency versions
+├── tsconfig.json                # TypeScript configuration
+├── vite.config.ts               # Vite build configuration
+├── react-router.config.ts       # React Router configuration
+├── tailwind.config.ts           # Tailwind CSS configuration
+└── README.md                    # Project documentation
+
+KEY TECHNOLOGIES USED:
+======================
+- React 19 with TypeScript
+- React Router 7 for routing
+- Tailwind CSS 4 for styling
+- Vite for build tooling
+
+PROJECT STRUCTURE NOTES:
+========================
+- SPA Architecture: Single-page application with client-side routing
+- Component Organization: UI components separated from page components
+- Static Assets: Images, PDFs, and other files in public/ directory
+- Type Safety: Full TypeScript support throughout
+- Modern CSS: Uses Tailwind CSS 4 with custom utilities and theme variables
+
+BUILD & DEVELOPMENT COMMANDS:
+=============================
+- npm run dev      - Start development server
+- npm run build    - Build for production
+- npm run preview  - Preview production build
+- npm run typecheck - Type checking
+
+ROUTING STRUCTURE:
+==================
+- /               - Home page
+- /about          - About page
+- /experience     - Experience/Internships
+- /projects       - Projects showcase
+- /skills         - Skills page
+- /contact        - Contact page
+- /certifications - Certifications page
+
+COMPONENT ARCHITECTURE:
+=======================
+- Layout components in app/root.tsx
+- Navigation in app/ui/navbar.tsx
+- Footer in app/ui/footer.tsx
+- Page components in app/routes/
+- Reusable UI components in app/ui/
+- Welcome/landing components in app/welcome/
+
+This structure follows modern React best practices with a clean separation 
+of concerns between routing, components, and styling.
