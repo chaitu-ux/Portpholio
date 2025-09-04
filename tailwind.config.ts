@@ -4,6 +4,13 @@ export default {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // Enable v4 features
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  experimental: {
+    optimizeUniversalDefaults: true,
+  },
 };
 
 
