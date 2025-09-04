@@ -1,9 +1,10 @@
 import { site } from "../content/site";
+import { TypingText } from "../components/typing-text";
 
 export function Hero() {
   return (
     <section className="container-prose pt-24 pb-16 min-h-screen flex items-center">
-      <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-center">
+      <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-start">
         {/* Left Content */}
         <div className="space-y-6 animate-fade-in-up">
           <div className="space-y-2">
@@ -13,9 +14,9 @@ export function Hero() {
             <h1 className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {site.name}
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              {site.role}
-            </p>
+            <div className="text-lg text-gray-600 dark:text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <TypingText text={site.role} speed={80} delay={1000} />
+            </div>
           </div>
           
           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
@@ -25,7 +26,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
             <a 
               href="/projects" 
-              className="button-primary group relative overflow-hidden"
+              className="button-primary button-ripple group relative overflow-hidden"
             >
               <span className="relative z-10">View Projects</span>
               <div className="absolute inset-0 bg-primary-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
@@ -81,7 +82,7 @@ export function Hero() {
         </div>
 
         {/* Right Content - Profile Image */}
-        <div className="flex items-center justify-center lg:justify-end animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+        <div className="flex items-start justify-center lg:justify-end animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
           {site.photo ? (
             <div className="relative">
               <div className="h-64 w-64 lg:h-80 lg:w-80 rounded-full border-4 border-primary-200 dark:border-primary-800 shadow-2xl overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800">

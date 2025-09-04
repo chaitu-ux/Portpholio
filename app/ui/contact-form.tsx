@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,13 +22,32 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("idle");
     
-    // Simulate form submission (replace with actual form handling)
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // EmailJS configuration - you'll need to set these up
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'polachaitu@gmail.com', // Your email
+        },
+        publicKey
+      );
+
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -140,7 +160,7 @@ export function ContactForm() {
             <span className="font-medium">Failed to send message</span>
           </div>
           <p className="text-sm text-red-600 dark:text-red-300 mt-1">
-            Please try again or contact me directly via email.
+            Please contact me directly via email: polachaitu@gmail.com
           </p>
         </div>
       )}
