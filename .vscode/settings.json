@@ -7,5 +7,7 @@
   "emmet.includeLanguages": {
     "typescript": "html",
     "typescriptreact": "html"
-  }
+  },
+  "json.schemaDownload.enable": false,
+  "json.validate.enable": true
 }
