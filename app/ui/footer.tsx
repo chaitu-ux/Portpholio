@@ -5,7 +5,6 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} Chaitanya Kumar Pola. All rights reserved.
         </p>
-        <h1>HELLO</h1>
       </div>
     </footer>
   );
