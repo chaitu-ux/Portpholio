@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router";
 import { useState } from "react";
+import { ThemeToggle } from "./theme-toggle";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -51,6 +52,7 @@ export function Navbar() {
           </ul>
           
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <a
               href="/resume.pdf"
               download
@@ -64,6 +66,7 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle />
           <button
             onClick={toggleMobileMenu}
             className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors duration-300"
