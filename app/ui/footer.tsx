@@ -77,9 +77,10 @@ export function Footer() {
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5zM.5 23h4V7h-4v16zM8 7v16h4v-8.5c0-2.347 3-2.536 3 0V23h4v-9.82c0-5.89-6.5-5.67-7-2.773V7H8z"/></svg>
               </a>
               <a href={`mailto:${site.email}`} aria-label="Email" className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8" />
-                  <rect x="3" y="6" width="18" height="12" rx="2" ry="2" />
+                <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="3" ry="3" fill="currentColor" />
+                  <path d="M5 8l7 5 7-5" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <rect x="5" y="8" width="14" height="8" rx="2" ry="2" fill="none" stroke="white" strokeWidth="2" />
                 </svg>
               </a>
             </div>
@@ -89,12 +90,12 @@ export function Footer() {
         <div className="mt-8 flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
           <p>© {year} Chaitanya Kumar Pola. All rights reserved.</p>
           <div className="flex items-center gap-2">
-            <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
+            <a href={`mailto:${site.email}`} className="footer-action inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               Email
             </a>
-            <button onClick={scrollTop} className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/><line x1="12" y1="9" x2="12" y2="21"/></svg>
+            <button onClick={scrollTop} className="footer-action inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors transition-transform duration-200 transform hover:-translate-y-0.5">
+              <svg className="w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/><line x1="12" y1="9" x2="12" y2="21"/></svg>
               Back to top
             </button>
           </div>

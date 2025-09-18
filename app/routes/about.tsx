@@ -32,11 +32,23 @@ export default function About() {
 
         <aside className="card animate-slide-fade-up hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300" style={{ animationDelay: '0.05s' }}>
           <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Quick Facts</h3>
-          <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-            <li>Based in: Remote-first</li>
-            <li>Frontend: React, React Router, Tailwind</li>
-            <li>Backend: Node.js, Express</li>
-            <li>Tools: Git, Vite, Netlify</li>
+          <ul className="space-y-2 text-sm dark:text-gray-300">
+            <li>
+              <span className="text-gray-900">Based in:</span>
+              <span className="text-gray-800"> Remote-first</span>
+            </li>
+            <li>
+              <span className="text-gray-900">Frontend:</span>
+              <span className="text-gray-800"> React, React Router, Tailwind</span>
+            </li>
+            <li>
+              <span className="text-gray-900">Backend:</span>
+              <span className="text-gray-800"> Node.js, Express</span>
+            </li>
+            <li>
+              <span className="text-gray-900">Tools:</span>
+              <span className="text-gray-800"> Git, Vite, Netlify</span>
+            </li>
           </ul>
         </aside>
       </section>
@@ -58,8 +70,8 @@ export default function About() {
 
       <div className="text-center mt-12 animate-slide-fade-up" style={{ animationDelay: '0.2s' }}>
         <a href="#contact" className="button-gradient animate-button-gradient ring-pulse rounded-md px-6 py-3 inline-flex items-center gap-2">
-          Let's Work Together
-        </a>
+              Let's Work Together
+            </a>
       </div>
     </main>
   );
