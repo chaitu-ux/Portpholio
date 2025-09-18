@@ -1,3 +1,16 @@
+[data-theme="light"] #home a svg,
+[data-theme="light"] #home button svg {
+  color: #374151 !important; /* gray-700 */
+}
+[data-theme="light"] #home a:hover svg,
+[data-theme="light"] #home button:hover svg {
+  color: #4338ca !important; /* indigo-700 */
+}
+
+/* Remove dark backgrounds from hero social icons in light theme */
+[data-theme="light"] #home a {
+  background-color: transparent !important;
+}
 @import "tailwindcss";
 
 @theme {
@@ -186,6 +199,14 @@ html {
   color: #4338ca !important;
 }
 
+/* Ensure theme toggle background is light in light mode */
+[data-theme="light"] .theme-toggle {
+  background-color: #f3f4f6 !important; /* gray-100 */
+}
+[data-theme="light"] .theme-toggle:hover {
+  background-color: #e0e7ff !important; /* primary-100-like */
+}
+
 [data-theme="light"] .button-gradient {
   background-image: linear-gradient(135deg, #4f46e5, #3b82f6, #10b981) !important;
   color: white !important;
@@ -206,26 +227,61 @@ html {
 }
 
 /* Icons in light theme */
-[data-theme="light"] svg {
-  stroke: #1f2937 !important;
-  fill: #1f2937 !important;
-  filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
-  stroke-width: 1.5 !important;
-}
+
 
 /* Navbar toggle switch icon */
-[data-theme="light"] header svg {
-  stroke: #1f2937 !important;
-  fill: #1f2937 !important;
-  filter: drop-shadow(0 0 1.5px rgba(0,0,0,0.3));
-  stroke-width: 1.8 !important;
-}
+/* Don't force header icon colors in light theme; allow component styles */
 
 /* Cards and content */
 [data-theme="light"] .card {
   background-color: white !important;
   border-color: #d1d5db !important;
   color: #1f2937 !important; /* dark text for light theme */
+}
+
+/* Generic icon defaults: do not force fill on all svgs; scope by container */
+[data-theme="light"] .icon, [data-theme="light"] .icon svg { color: #374151; stroke: currentColor; }
+[data-theme="light"] a:hover .icon, [data-theme="light"] a:hover .icon svg { color: #4338ca; }
+
+/* Specific areas: navbar icons already handled; footer social icons */
+[data-theme="light"] footer a svg { color: #374151; stroke: currentColor; fill: currentColor; }
+[data-theme="light"] footer a:hover svg { color: #4338ca; }
+
+/* Footer icon button background in light theme */
+[data-theme="light"] footer a.p-2, [data-theme="light"] footer .footer-action {
+  background-color: #f3f4f6 !important; /* gray-100 */
+}
+[data-theme="light"] footer a.p-2:hover, [data-theme="light"] footer .footer-action:hover {
+  background-color: #e5e7eb !important; /* gray-200 */
+}
+
+/* Animate back-to-top arrow */
+.footer-action:hover svg { transform: translateY(-2px); }
+
+/* Contact and quick links cards */
+[data-theme="light"] .card a svg { color: #374151; stroke: currentColor; fill: none; }
+[data-theme="light"] .card a:hover svg { color: #4338ca; }
+
+/* Contact page: ensure light backgrounds */
+[data-theme="light"] #contact .card {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important; /* gray-200 */
+}
+[data-theme="light"] #contact .card a {
+  background-color: #f9fafb !important; /* gray-50 */
+}
+[data-theme="light"] #contact .card a:hover {
+  background-color: #eef2ff !important; /* subtle primary tint */
+}
+[data-theme="light"] #contact .card .w-10 {
+  background-color: #f3f4f6 !important; /* gray-100 for icon tiles */
+}
+[data-theme="light"] #contact .card .w-10 svg {
+  color: #374151 !important;
+  stroke: currentColor !important;
+}
+[data-theme="light"] #contact .card .w-10:hover svg {
+  color: #4338ca !important;
 }
 
 /* Skills section cards and icons */
@@ -242,26 +298,7 @@ html {
   filter: none !important;
 }
 
-/* Override Tailwind text-primary-600 for light theme in skills section */
-[data-theme="light"] #skills svg.text-primary-600 {
-  color: #374151 !important;
-  stroke: #374151 !important;
-  fill: #374151 !important;
-}
-
-/* Override Tailwind text-accent-600 for light theme in skills section */
-[data-theme="light"] #skills svg.text-accent-600 {
-  color: #4b5563 !important; /* Tailwind gray-600 */
-  stroke: #4b5563 !important;
-  fill: #4b5563 !important;
-}
-
-/* Override Tailwind text-green-600 for light theme in skills section */
-[data-theme="light"] #skills svg.text-green-600 {
-  color: #166534 !important; /* Tailwind green-800 */
-  stroke: #166534 !important;
-  fill: #166534 !important;
-}
+/* Keep Tailwind brand colors for icons inside skills section; no overrides */
 
 /* Hover state for skills cards */
 [data-theme="light"] #skills .card:hover {
@@ -275,8 +312,43 @@ html {
   fill: #1e40af !important;
   filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
 }
-  color: #1f2937 !important;
+
+/* Force text color inside skill rows in light theme regardless of defaults */
+[data-theme="light"] #skills .skills-item span {
+  color: #1f2937 !important; /* gray-800 */
 }
+[data-theme="light"] #skills .skills-item:hover span {
+  color: #1e40af !important; /* indigo-800 on hover */
+}
+
+/* Fix skills row background in light theme */
+[data-theme="light"] #skills .skills-item {
+  background-color: #f9fafb !important; /* gray-50 */
+}
+[data-theme="light"] #skills .skills-item:hover {
+  background-color: #eef2ff !important; /* primary-50 like */
+}
+
+/* Experience level card aesthetics for light theme */
+[data-theme="light"] #skills .card .w-16.h-16 {
+  background-color: #eef2ff !important; /* soft indigo */
+}
+[data-theme="light"] #skills .card .w-16.h-16 svg {
+  color: #3b82f6 !important; /* sky-500 */
+  stroke: currentColor !important;
+}
+[data-theme="light"] #skills .card {
+  background-color: #eff6ff !important; /* blue-50 panel */
+  border-color: #e0e7ff !important; /* indigo-100 border */
+}
+[data-theme="light"] #skills .card h3,
+[data-theme="light"] #skills .card h4 {
+  color: #1f2937 !important; /* gray-800 */
+}
+[data-theme="light"] #skills .card p {
+  color: #4b5563 !important; /* gray-600 */
+}
+
 
 /* Headings and paragraphs */
 [data-theme="light"] h1, 
