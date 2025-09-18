@@ -25,14 +25,14 @@ export function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
             <a 
-              href="/projects" 
+              href="#projects" 
               className="button-primary button-ripple group relative overflow-hidden"
             >
               <span className="relative z-10">View Projects</span>
               <div className="absolute inset-0 bg-primary-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </a>
             <a 
-              href="/contact" 
+              href="#contact" 
               className="tag hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors duration-300"
             >
               Get In Touch

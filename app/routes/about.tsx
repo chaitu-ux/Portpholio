@@ -57,7 +57,7 @@ export default function About() {
       </section>
 
       <div className="text-center mt-12 animate-slide-fade-up" style={{ animationDelay: '0.2s' }}>
-        <a href="/contact" className="button-gradient animate-button-gradient ring-pulse rounded-md px-6 py-3 inline-flex items-center gap-2">
+        <a href="#contact" className="button-gradient animate-button-gradient ring-pulse rounded-md px-6 py-3 inline-flex items-center gap-2">
           Let's Work Together
         </a>
       </div>
