@@ -45,7 +45,7 @@ export const projects: Project[] = [
     description:
       "Full‑stack MERN app for student safety: parents track buses in real time and receive instant onboard/offboard notifications via QR‑scanned ID cards. Secure REST API (15+ endpoints) with JWT Auth; Google Maps for live location; responsive UI with 20+ reusable React components.",
     tags: ["MongoDB", "Express", "React", "Node.js", "JWT", "Google Maps API"],
-    liveUrl: "",
+    liveUrl: "https://scan2ride.vercel.app/",
     repoUrl: "https://github.com/chaitu-ux/Scan2Ride",
     image: "/projects/scan2ride-dashboard.jpg",
     imageAlt: "Scan2Ride dashboard showing live attendance, bus tracking, and scanner status with real-time metrics",
