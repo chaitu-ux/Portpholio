@@ -70,12 +70,16 @@ export function Footer() {
           <div>
             <h3 className="text-gray-900 dark:text-white font-semibold mb-3">Connect</h3>
             <div className="flex gap-3">
-              <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub" className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-3.162 19.49c.5.09.683-.217.683-.483 0-.237-.009-.868-.013-1.705-2.78.603-3.366-1.34-3.366-1.34-.454-1.154-1.109-1.463-1.109-1.463-.907-.62.07-.607.07-.607 1.003.07 1.53 1.03 1.53 1.03.892 1.528 2.341 1.087 2.91.832.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.944 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844a9.56 9.56 0 012.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.338 4.688-4.566 4.937.359.31.679.923.679 1.861 0 1.343-.012 2.425-.012 2.754 0 .268.181.58.688.481A10 10 0 0012 2z"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5zM.5 23h4V7h-4v16zM8 7v16h4v-8.5c0-2.347 3-2.536 3 0V23h4v-9.82c0-5.89-6.5-5.67-7-2.773V7H8z"/></svg>
-              </a>
+              {site.github && (
+                <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-3.162 19.49c.5.09.683-.217.683-.483 0-.237-.009-.868-.013-1.705-2.78.603-3.366-1.34-3.366-1.34-.454-1.154-1.109-1.463-1.109-1.463-.907-.62.07-.607.07-.607 1.003.07 1.53 1.03 1.53 1.03.892 1.528 2.341 1.087 2.91.832.09-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.944 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844a9.56 9.56 0 012.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.338 4.688-4.566 4.937.359.31.679.923.679 1.861 0 1.343-.012 2.425-.012 2.754 0 .268.181.58.688.481A10 10 0 0012 2z"/></svg>
+                </a>
+              )}
+              {site.linkedin && (
+                <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5zM.5 23h4V7h-4v16zM8 7v16h4v-8.5c0-2.347 3-2.536 3 0V23h4v-9.82c0-5.89-6.5-5.67-7-2.773V7H8z"/></svg>
+                </a>
+              )}
               <a href={`mailto:${site.email}`} aria-label="Email" className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="3" ry="3" fill="currentColor" />
