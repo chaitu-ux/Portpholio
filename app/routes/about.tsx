@@ -34,20 +34,20 @@ export default function About() {
           <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Quick Facts</h3>
           <ul className="space-y-2 text-sm dark:text-gray-300">
             <li>
-              <span className="text-gray-900">Based in:</span>
-              <span className="text-gray-800"> Remote-first</span>
+              <span className="text-gray-900 dark:text-gray-100">Based in:</span>
+              <span className="text-gray-700 dark:text-gray-200"> Remote-first</span>
             </li>
             <li>
-              <span className="text-gray-900">Frontend:</span>
-              <span className="text-gray-800"> React, React Router, Tailwind</span>
+              <span className="text-gray-900 dark:text-gray-100">Frontend:</span>
+              <span className="text-gray-700 dark:text-gray-200"> React, React Router, Tailwind</span>
             </li>
             <li>
-              <span className="text-gray-900">Backend:</span>
-              <span className="text-gray-800"> Node.js, Express</span>
+              <span className="text-gray-900 dark:text-gray-100">Backend:</span>
+              <span className="text-gray-700 dark:text-gray-200"> Node.js, Express</span>
             </li>
             <li>
-              <span className="text-gray-900">Tools:</span>
-              <span className="text-gray-800"> Git, Vite, Netlify</span>
+              <span className="text-gray-900 dark:text-gray-100">Tools:</span>
+              <span className="text-gray-700 dark:text-gray-200"> Git, Vite, Netlify</span>
             </li>
           </ul>
         </aside>
@@ -61,7 +61,7 @@ export default function About() {
           { title: 'Problem Solver', color: 'green' },
           { title: 'Detail Oriented', color: 'purple' },
         ].map((item, i) => (
-          <div key={item.title} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-gray-900/60 animate-slide-fade-up hover:-translate-y-1 hover:shadow-xl transition-all duration-300" style={{ animationDelay: `${0.08 * i}s` }}>
+          <div key={item.title} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/60 animate-slide-fade-up hover:-translate-y-1 hover:shadow-xl transition-all duration-300" style={{ animationDelay: `${0.08 * i}s` }}>
             <h3 className="font-semibold text-gray-900 dark:text-white">{item.title}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">Consistent and reliable in delivery.</p>
           </div>
