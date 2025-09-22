@@ -45,7 +45,7 @@ export const projects: Project[] = [
     description:
       "Full‑stack MERN app for student safety: parents track buses in real time and receive instant onboard/offboard notifications via QR‑scanned ID cards. Secure REST API (15+ endpoints) with JWT Auth; Google Maps for live location; responsive UI with 20+ reusable React components.",
     tags: ["MongoDB", "Express", "React", "Node.js", "JWT", "Google Maps API"],
-    liveUrl: "",
+    liveUrl: "https://scan2ride.vercel.app/",
     repoUrl: "https://github.com/chaitu-ux/Scan2Ride",
     image: "/projects/scan2ride-dashboard.jpg",
     imageAlt: "Scan2Ride dashboard showing live attendance, bus tracking, and scanner status with real-time metrics",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     description:
       "Dynamic React SPA with sections for events, teams, and player stats across 10+ pages. Client‑side routing with React Router; interactive UI (carousels, galleries). Modular architecture with 40+ reusable components; CSS Modules for scoped styling.",
     tags: ["React", "React Router", "SPA", "CSS Modules"],
-    liveUrl: "https://scan2ride.vercel.app/",
+    liveUrl: "",
     repoUrl: "https://github.com/chaitu-ux/sports_website",
     image: "/projects/sports-hub-screenshot.jpg",
     imageAlt: "Sports Hub website homepage featuring baseball player and navigation menu with modern sports design",
