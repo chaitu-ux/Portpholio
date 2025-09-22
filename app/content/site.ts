@@ -55,7 +55,7 @@ export const projects: Project[] = [
     description:
       "Dynamic React SPA with sections for events, teams, and player stats across 10+ pages. Client‑side routing with React Router; interactive UI (carousels, galleries). Modular architecture with 40+ reusable components; CSS Modules for scoped styling.",
     tags: ["React", "React Router", "SPA", "CSS Modules"],
-    liveUrl: "",
+    liveUrl: "https://scan2ride.vercel.app/",
     repoUrl: "https://github.com/chaitu-ux/sports_website",
     image: "/projects/sports-hub-screenshot.jpg",
     imageAlt: "Sports Hub website homepage featuring baseball player and navigation menu with modern sports design",
