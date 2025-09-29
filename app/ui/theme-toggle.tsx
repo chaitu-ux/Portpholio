@@ -29,13 +29,18 @@ export function ThemeToggle() {
   const applyTheme = (newTheme: 'light' | 'dark') => {
     try {
       const root = document.documentElement;
+      const metaTheme = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement | null;
       
       if (newTheme === 'dark') {
         root.classList.add('dark');
         root.style.colorScheme = 'dark';
+        root.setAttribute('data-theme', 'dark');
+        if (metaTheme) metaTheme.content = '#0b1220';
       } else {
         root.classList.remove('dark');
         root.style.colorScheme = 'light';
+        root.setAttribute('data-theme', 'light');
+        if (metaTheme) metaTheme.content = '#ffffff';
       }
       
       localStorage.setItem('theme', newTheme);
