@@ -158,7 +158,7 @@ export default function Projects() {
           <p className="text-gray-600 dark:text-gray-300 mb-6">
             I'm always excited to take on new challenges and create amazing solutions.
           </p>
-          <a href="/contact" className="button-primary">
+          <a href="#contact" className="button-primary">
             Get In Touch
           </a>
         </div>
