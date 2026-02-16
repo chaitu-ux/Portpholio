@@ -88,7 +88,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-          <p>© {year} Chaitanya Kumar Pola. All rights reserved.</p>
+          <p>© {year} Chaitanya Kumar Pola</p>
           <div className="flex items-center gap-2">
             <a href={`mailto:${site.email}`} className="footer-action inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
