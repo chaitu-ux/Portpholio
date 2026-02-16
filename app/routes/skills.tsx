@@ -41,13 +41,13 @@ export default function Skills() {
               {categorySkills.map((skill, skillIndex) => (
                 <div 
                   key={skill}
-                  className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-gray-800 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors duration-300"
+                  className="skills-item flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-gray-800 transition-colors duration-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
                   style={{ animationDelay: `${(categoryIndex * 0.1) + (skillIndex * 0.05)}s` }}
                 >
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
                     {skill}
                   </span>
-                  <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
                 </div>
               ))}
             </div>
@@ -56,7 +56,7 @@ export default function Skills() {
       </div>
 
       {/* All Skills Grid */}
-      <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+      {/* <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">
           Complete Skill Set
         </h2>
@@ -71,7 +71,7 @@ export default function Skills() {
             </span>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Experience Level */}
       <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
